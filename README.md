@@ -17,6 +17,6 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 - Jupyter Notebook or JupyterLab
 
 ```bash
-pip install notebook requests beautifulsoup4
+pip install notebook
 jupyter notebook
 ```
