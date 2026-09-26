@@ -1,0 +1,10 @@
+aiosqlite
+alembic
+asyncpg
+faker
+fastapi
+rich
+sqlalchemy
+sqlmodel
+typer
+uvicorn

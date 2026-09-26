@@ -1,0 +1,4 @@
+event_id,person_id,response_status
+2,1,PENDING
+2,2,PENDING
+3,2,TENTATIVE
