@@ -1,0 +1,11 @@
+
+--- products.txt ---
+AB12-CD34
+XY99-ZZ01
+123-456
+789-012
+
+--- products2.txt ---
+MN34-OP56
+QR78-ST90
+321-654

@@ -1,0 +1,1 @@
+Compliant with GDPR and other standards.

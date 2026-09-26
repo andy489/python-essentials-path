@@ -1,0 +1,19 @@
+{
+    "user_id": "logistics_manager_01",
+    "region_filter": [
+        "North America",
+        "Europe"
+    ],
+    "alerts": {
+        "delivery_delay": true,
+        "temperature_threshold": 5.0
+    },
+    "dashboard_layout": {
+        "theme": "dark",
+        "widgets": [
+            "shipment_map",
+            "latest_orders",
+            "alert_panel"
+        ]
+    }
+}

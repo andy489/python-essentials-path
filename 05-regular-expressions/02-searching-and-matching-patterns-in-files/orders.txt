@@ -1,0 +1,5 @@
+Order AB12-CD34 placed on 2024-03-15
+Reference: 123-456
+Customer email: alice@example.com
+Order XY99-ZZ01 confirmed
+Reference: 789-012

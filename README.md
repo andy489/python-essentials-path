@@ -10,6 +10,7 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 02 | [Object-Oriented Programming](02-object-oriented-programming/) | Classes, attributes, properties, and class relationships |
 | 03 | [File Operations](03-file-operations/) | Reading, writing, and appending files; file modes and best practices |
 | 04 | [HTTP Clients and APIs](04-http-clients-and-apis/) | GET and POST requests, response formats (JSON, XML, HTML), sessions, authentication, error handling, retries |
+| 05 | [Regular Expressions](05-regular-expressions/) | Pattern syntax, searching files, input validation, log parsing, data transformation, regex optimisation |
 
 ## Requirements
 

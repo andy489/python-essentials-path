@@ -1,0 +1,6 @@
+Inventory report
+AB12-CD34 - in stock
+XY99-ZZ01 - out of stock
+123-456 - discontinued
+789-012 - available
+random text without a code

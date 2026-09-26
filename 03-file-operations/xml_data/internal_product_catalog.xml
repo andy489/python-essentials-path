@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<catalog>
+    <product>
+        <id>GLOBO-001</id>
+        <name>Smart Tracker</name>
+        <weight>0.12</weight>
+        <status>Available</status>
+    </product>
+    <product>
+        <id>GLOBO-002</id>
+        <name>Thermal Label Printer</name>
+        <weight>0</weight>
+        <status>Out of stock</status>
+    </product>
+    <product>
+        <id>GLOBO-003</id>
+        <name>Warehouse Scanner</name>
+        <weight>0.8</weight>
+        <status>Available</status>
+    </product>
+</catalog>

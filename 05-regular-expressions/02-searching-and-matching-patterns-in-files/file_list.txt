@@ -1,0 +1,3 @@
+Attached files: report.pdf, image.png, data.csv
+Also see: notes.txt, archive.zip, presentation.pptx
+Scripts: process.py, config.json

@@ -1,0 +1,5 @@
+invoice number 1234
+customer: Alice
+product: widget
+invoice date: 2024-01-15
+total: 99.99

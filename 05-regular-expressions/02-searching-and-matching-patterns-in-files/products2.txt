@@ -1,0 +1,4 @@
+Warehouse B
+MN34-OP56 - pending
+QR78-ST90 - shipped
+321-654 - returned
