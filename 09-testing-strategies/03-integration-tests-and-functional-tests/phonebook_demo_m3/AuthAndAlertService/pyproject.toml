@@ -1,0 +1,16 @@
+[project]
+name = "Auth and Alert Service"
+version = "0.1.0"
+description = "For use with an Enterprise Phonebook"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "httpx>=0.28.1",
+    "pytest>=8.4.1",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
