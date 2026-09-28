@@ -13,6 +13,7 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 05 | [Regular Expressions](05-regular-expressions/) | Pattern syntax, searching files, input validation, log parsing, data transformation, regex optimisation |
 | 06 | [Relational Database Integration](06-relational-database-integration/) | SQLite with `sqlite3`, SQLAlchemy ORM data modeling and querying, transactions, migrations, async support |
 | 07 | [Python Debugging Techniques](07-python-debugging-techniques/) | Tracebacks, `pdb`, VS Code debugger, `logging` module, `loguru` |
+| 08 | [Python Development Environments](08-python-development-environments/) | `pip`, `venv`, `uv`, `poetry`, `conda`, lockfiles, environment reproducibility |
 
 ## Requirements
 
