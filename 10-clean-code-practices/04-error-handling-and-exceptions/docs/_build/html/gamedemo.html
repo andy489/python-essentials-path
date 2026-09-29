@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>gamedemo package &#8212; demo 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="demo documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="gamedemo-package">
+<h1>gamedemo package<a class="headerlink" href="#gamedemo-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-gamedemo.game">
+<span id="gamedemo-game-module"></span><h2>gamedemo.game module<a class="headerlink" href="#module-gamedemo.game" title="Link to this heading">¶</a></h2>
+<section id="game-py">
+<h3>game.py<a class="headerlink" href="#game-py" title="Link to this heading">¶</a></h3>
+<p>This module contains the Game class that implements the actual game mechanics as well as
+the __main__ construct to make the game runnable.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="gamedemo.game.Game">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gamedemo.game.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#gamedemo.player.Player" title="gamedemo.player.Player"><span class="pre">Player</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">player2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#gamedemo.player.Player" title="gamedemo.player.Player"><span class="pre">Player</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/game.html#Game"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.game.Game" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The game class implements the game mechanics for this demo. To understand the way the
+game works, read the documentation for the <a class="reference internal" href="#gamedemo.game.run" title="gamedemo.game.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gamedemo.game.Game.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/game.html#Game.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.game.Game.run" title="Link to this definition">¶</a></dt>
+<dd><p>This method implements the game mechanics. The game loops until one of the players
+runs out of health. Every turn, one of the players is randomly chosen to attack. We
+call the <code class="xref py py-meth docutils literal notranslate"><span class="pre">attack()</span></code> method on that player’s weapon.
+The damage dealt by this attack is applied to the player by calling
+<a class="reference internal" href="#gamedemo.player.Player.take_hit" title="gamedemo.player.Player.take_hit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gamedemo.player.Player.take_hit()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gamedemo.game.run">
+<span class="sig-prename descclassname"><span class="pre">gamedemo.game.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/game.html#run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.game.run" title="Link to this definition">¶</a></dt>
+<dd><p>Note: this function looks slightly different in the videos.
+I changed this to make it easier to run the project. See __main__.py
+for instructions.</p>
+</dd></dl>
+
+</section>
+<section id="module-gamedemo.player">
+<span id="gamedemo-player-module"></span><h2>gamedemo.player module<a class="headerlink" href="#module-gamedemo.player" title="Link to this heading">¶</a></h2>
+<section id="player-py">
+<h3>player.py<a class="headerlink" href="#player-py" title="Link to this heading">¶</a></h3>
+<p>This module contains the Player class that represents game characters.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="gamedemo.player.Player">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gamedemo.player.</span></span><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weapon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/player.html#Player"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.player.Player" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Player class represents the characters in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>health</strong> – The current health of the character. Starts at 100.
+Once it reaches 0, we’re dead.</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="gamedemo.player.Player.is_alive">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_alive</span></span><a class="headerlink" href="#gamedemo.player.Player.is_alive" title="Link to this definition">¶</a></dt>
+<dd><p>True if <code class="xref py py-attr docutils literal notranslate"><span class="pre">health</span></code> is larger than 0, False otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gamedemo.player.Player.take_hit">
+<span class="sig-name descname"><span class="pre">take_hit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/player.html#Player.take_hit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.player.Player.take_hit" title="Link to this definition">¶</a></dt>
+<dd><p>This method gets called when the player takes a hit from the opponent’s weapon
+:param damage: The damage dealt. This will be substracted from <code class="xref py py-attr docutils literal notranslate"><span class="pre">health</span></code>.
+:return: The new value of <code class="xref py py-attr docutils literal notranslate"><span class="pre">health</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gamedemo.weapons">
+<span id="gamedemo-weapons-module"></span><h2>gamedemo.weapons module<a class="headerlink" href="#module-gamedemo.weapons" title="Link to this heading">¶</a></h2>
+<section id="weapons-py">
+<h3>weapons.py<a class="headerlink" href="#weapons-py" title="Link to this heading">¶</a></h3>
+<p>This module contains classes for Weapons.</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="gamedemo.weapons.FireBreath">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gamedemo.weapons.</span></span><span class="sig-name descname"><span class="pre">FireBreath</span></span><a class="reference internal" href="_modules/gamedemo/weapons.html#FireBreath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.FireBreath" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gamedemo.weapons.Weapon" title="gamedemo.weapons.Weapon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Weapon</span></code></a></p>
+<p>FireBreath is a weapon only wielded by dragons or wizards. It can deal a lot of damage,
+but it also has its drawbacks. There is a 30% chance that the attack will not work, and after
+a successful attack you will need to wait a while before you will be able to breath fire again.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gamedemo.weapons.FireBreath.attack">
+<span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/weapons.html#FireBreath.attack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.FireBreath.attack" title="Link to this definition">¶</a></dt>
+<dd><p>This method should return a tuple (damage, text): how much damage was dealt
+and what text to output. Text is a format string with placeholders for attacker
+and defender.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gamedemo.weapons.Sword">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gamedemo.weapons.</span></span><span class="sig-name descname"><span class="pre">Sword</span></span><a class="reference internal" href="_modules/gamedemo/weapons.html#Sword"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.Sword" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gamedemo.weapons.Weapon" title="gamedemo.weapons.Weapon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Weapon</span></code></a></p>
+<p>A primitive close-range weapon. It deals either 5 or 10 damage with a 50/50 chance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gamedemo.weapons.Sword.attack">
+<span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/gamedemo/weapons.html#Sword.attack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.Sword.attack" title="Link to this definition">¶</a></dt>
+<dd><p>This method should return a tuple (damage, text): how much damage was dealt
+and what text to output. Text is a format string with placeholders for attacker
+and defender.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gamedemo.weapons.Weapon">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gamedemo.weapons.</span></span><span class="sig-name descname"><span class="pre">Weapon</span></span><a class="reference internal" href="_modules/gamedemo/weapons.html#Weapon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.Weapon" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>This abstract class defines the method <a class="reference internal" href="#gamedemo.weapons.Weapon.attack" title="gamedemo.weapons.Weapon.attack"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attack()</span></code></a> that should be implemented
+by subclasses.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gamedemo.weapons.Weapon.attack">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gamedemo/weapons.html#Weapon.attack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gamedemo.weapons.Weapon.attack" title="Link to this definition">¶</a></dt>
+<dd><p>This method should return a tuple (damage, text): how much damage was dealt
+and what text to output. Text is a format string with placeholders for attacker
+and defender.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gamedemo">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gamedemo" title="Link to this heading">¶</a></h2>
+<section id="demo-project-game">
+<h3>Demo Project: Game<a class="headerlink" href="#demo-project-game" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>This project serves mainly as an example project for my</dt><dd><p><a class="reference external" href="http://www.pluralsight">Pluralsight</a> video course.</p>
+</dd>
+</dl>
+<p>The idea is to simulate a very simple role-playing game where two characters
+fight. The game mechanics are controlled by the <a class="reference internal" href="#gamedemo.game.Game" title="gamedemo.game.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">game.Game</span></code></a> class and the
+characters are <a class="reference internal" href="#gamedemo.player.Player" title="gamedemo.player.Player"><code class="xref py py-class docutils literal notranslate"><span class="pre">Player</span></code></a> instances, each of which has a
+<a class="reference internal" href="#gamedemo.weapons.Weapon" title="gamedemo.weapons.Weapon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Weapon</span></code></a> to attack with.</p>
+<p>The scenario we will try to simulate is of an old-fashioned knight fighting
+a fire-breathing dragon.</p>
+<section id="running-this-project">
+<h4>Running this project<a class="headerlink" href="#running-this-project" title="Link to this heading">¶</a></h4>
+<p>You can run this project with the command “python -m gamedemo”.
+Make sure you are located at the project toplevel directory (outside the package).</p>
+</section>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">demo</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">gamedemo package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gamedemo.game">gamedemo.game module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#game-py">game.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.game.Game"><code class="docutils literal notranslate"><span class="pre">Game</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.game.Game.run"><code class="docutils literal notranslate"><span class="pre">Game.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.game.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gamedemo.player">gamedemo.player module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#player-py">player.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.player.Player"><code class="docutils literal notranslate"><span class="pre">Player</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.player.Player.is_alive"><code class="docutils literal notranslate"><span class="pre">Player.is_alive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.player.Player.take_hit"><code class="docutils literal notranslate"><span class="pre">Player.take_hit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gamedemo.weapons">gamedemo.weapons module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#weapons-py">weapons.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.weapons.FireBreath"><code class="docutils literal notranslate"><span class="pre">FireBreath</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.weapons.FireBreath.attack"><code class="docutils literal notranslate"><span class="pre">FireBreath.attack()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.weapons.Sword"><code class="docutils literal notranslate"><span class="pre">Sword</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.weapons.Sword.attack"><code class="docutils literal notranslate"><span class="pre">Sword.attack()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gamedemo.weapons.Weapon"><code class="docutils literal notranslate"><span class="pre">Weapon</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gamedemo.weapons.Weapon.attack"><code class="docutils literal notranslate"><span class="pre">Weapon.attack()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gamedemo">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#demo-project-game">Demo Project: Game</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#running-this-project">Running this project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">demo documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Reindert.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/gamedemo.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

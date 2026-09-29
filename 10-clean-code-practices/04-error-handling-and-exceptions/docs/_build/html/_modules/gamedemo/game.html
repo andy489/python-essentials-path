@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gamedemo.game &#8212; demo 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for gamedemo.game</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">game.py</span>
+<span class="sd">-------</span>
+
+<span class="sd">This module contains the Game class that implements the actual game mechanics as well as</span>
+<span class="sd">the __main__ construct to make the game runnable.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Reindert-Jan Ekker&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">gamedemo.player</span><span class="w"> </span><span class="kn">import</span> <span class="n">Player</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gamedemo.weapons</span><span class="w"> </span><span class="kn">import</span> <span class="n">FireBreath</span><span class="p">,</span> <span class="n">Sword</span>
+
+
+<div class="viewcode-block" id="Game">
+<a class="viewcode-back" href="../../gamedemo.html#gamedemo.game.Game">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Game</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The game class implements the game mechanics for this demo. To understand the way the</span>
+<span class="sd">    game works, read the documentation for the :meth:`run` method.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player1</span><span class="p">:</span> <span class="n">Player</span><span class="p">,</span> <span class="n">player2</span><span class="p">:</span> <span class="n">Player</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new game with two players.</span>
+
+<span class="sd">        :param player1: First player</span>
+<span class="sd">        :param player2: Second player</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p1</span> <span class="o">=</span> <span class="n">player1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p2</span> <span class="o">=</span> <span class="n">player2</span>
+
+<div class="viewcode-block" id="Game.run">
+<a class="viewcode-back" href="../../gamedemo.html#gamedemo.game.Game.run">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method implements the game mechanics. The game loops until one of the players</span>
+<span class="sd">        runs out of health. Every turn, one of the players is randomly chosen to attack. We</span>
+<span class="sd">        call the :meth:`~gamedemo.weapon.Weapon.attack` method on that player&#39;s weapon.</span>
+<span class="sd">        The damage dealt by this attack is applied to the player by calling</span>
+<span class="sd">        :meth:`gamedemo.player.Player.take_hit`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p2</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">p1</span><span class="o">.</span><span class="n">is_alive</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">p2</span><span class="o">.</span><span class="n">is_alive</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+                <span class="n">attacker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p1</span>
+                <span class="n">defender</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">attacker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p2</span>
+                <span class="n">defender</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p1</span>
+            <span class="n">dmg</span><span class="p">,</span> <span class="n">sound</span> <span class="o">=</span> <span class="n">attacker</span><span class="o">.</span><span class="n">weapon</span><span class="o">.</span><span class="n">attack</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">attacker</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;attacks:&quot;</span><span class="p">,</span> <span class="n">sound</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">attacker</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;did&quot;</span><span class="p">,</span> <span class="n">dmg</span><span class="p">,</span> <span class="s2">&quot;damage&quot;</span><span class="p">)</span>
+            <span class="n">defender</span><span class="o">.</span><span class="n">take_hit</span><span class="p">(</span><span class="n">dmg</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">attacker</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;won with&quot;</span><span class="p">,</span> <span class="n">attacker</span><span class="o">.</span><span class="n">health</span><span class="p">,</span> <span class="s2">&quot;health left&quot;</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="run">
+<a class="viewcode-back" href="../../gamedemo.html#gamedemo.game.run">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Note: this function looks slightly different in the videos.</span>
+<span class="sd">    I changed this to make it easier to run the project. See __main__.py</span>
+<span class="sd">    for instructions.&quot;&quot;&quot;</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span>
+        <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;The Knight&quot;</span><span class="p">,</span> <span class="n">Sword</span><span class="p">()),</span>
+        <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;The Dragon&quot;</span><span class="p">,</span> <span class="n">FireBreath</span><span class="p">()),</span>
+    <span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">demo</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../gamedemo.html">gamedemo package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Reindert.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

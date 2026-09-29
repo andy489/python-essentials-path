@@ -15,6 +15,8 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 07 | [Python Debugging Techniques](07-debugging-techniques/) | Tracebacks, `pdb`, VS Code debugger, `logging` module, `loguru` |
 | 08 | [Python Development Environments](08-development-environments/) | `pip`, `venv`, `uv`, `poetry`, `conda`, lockfiles, environment reproducibility |
 | 09 | [Python Testing Strategies](09-testing-strategies/) | `pytest` unit tests, test doubles (mocks, stubs, fakes), integration and functional tests |
+| 10 | [Clean Code Practices](10-clean-code-practices/) | Maintainable code (KISS, YAGNI, SRP, coupling), PEP 8 style, docstrings and Sphinx, error handling, code reviews |
+| 12 | [Performance Optimization](12-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
 
 ## Requirements
 

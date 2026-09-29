@@ -1,0 +1,17 @@
+ [lint]
+select = [
+    # Missing docstring for public method
+    "D102",
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
