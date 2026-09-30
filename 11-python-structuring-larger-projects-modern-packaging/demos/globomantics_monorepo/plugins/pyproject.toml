@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globomantics-plugins"
+version = "0.1.0"
+dependencies = ["globomantics-shared"]
+
+[project.entry-points."globomantics.plugins"]
+loyal = "globomantics_plugins.builtin_loyalty:LoyalCustomerDiscount"
+high_spender = "globomantics_plugins.builtin_high_spender:HighSpenderDiscount"
+vip = "globomantics_plugins.builtin_vip:VipCustomerDiscount"

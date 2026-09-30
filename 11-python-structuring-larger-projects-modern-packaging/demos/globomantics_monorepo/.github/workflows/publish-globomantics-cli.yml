@@ -1,0 +1,38 @@
+name: Publish Globomantics CLI
+
+on:
+  push:
+    tags:
+      - "globomantics-cli-v*"
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the monorepo
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      # 3. Install build + twine
+      - name: Install build tools
+        run: pip install build twine
+
+      # 4. Build the CLI package
+      - name: Build Globomantics CLI package
+        run: python -m build
+        working-directory: cli
+
+      # 5. Publish to internal package index
+      - name: Publish package
+        run: twine upload --repository globomantics-internal dist/*
+        working-directory: cli
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.GLOBOMANTICS_INTERNAL_TOKEN }}

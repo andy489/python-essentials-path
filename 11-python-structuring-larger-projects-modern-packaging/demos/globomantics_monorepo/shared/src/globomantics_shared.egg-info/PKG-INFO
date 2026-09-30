@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: globomantics-shared
+Version: 0.1.0
+Summary: Shared utilities for all Globomantics packages
+Author-email: Globomantics <eng@globomantics.example>
+Requires-Python: >=3.10

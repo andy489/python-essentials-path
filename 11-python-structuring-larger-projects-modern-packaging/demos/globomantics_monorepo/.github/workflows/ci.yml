@@ -1,0 +1,62 @@
+name: CI - Build & Test Globomantics Monorepo
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      # 1. Check out code
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # 3. Install build/test tools
+      - name: Install tooling
+        run: |
+          pip install --upgrade pip
+          pip install pytest build
+
+      # 4. Install dependencies for all packages
+      - name: Install all monorepo packages
+        run: |
+          for pkg in shared data analytics billing plugins cli; do
+            echo "Installing Globomantics package: $pkg"
+            pip install "./$pkg"
+          done
+
+      # 5. Run tests across the entire monorepo
+      - name: Run pytest
+        run: pytest -q
+
+      # 6. Build wheels for all packages
+      - name: Build wheels
+        run: |
+          mkdir -p build_artifacts
+          for pkg in shared data analytics billing plugins cli; do
+            echo "Building wheel for: $pkg"
+            python -m build "$pkg"
+            cp $pkg/dist/* build_artifacts/
+          done
+
+      # 7. Upload wheels as workflow artifacts
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: globomantics-wheels
+          path: build_artifacts
