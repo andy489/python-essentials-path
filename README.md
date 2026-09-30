@@ -16,6 +16,7 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 08 | [Python Development Environments](08-development-environments/) | `pip`, `venv`, `uv`, `poetry`, `conda`, lockfiles, environment reproducibility |
 | 09 | [Python Testing Strategies](09-testing-strategies/) | `pytest` unit tests, test doubles (mocks, stubs, fakes), integration and functional tests |
 | 10 | [Clean Code Practices](10-clean-code-practices/) | Maintainable code (KISS, YAGNI, SRP, coupling), PEP 8 style, docstrings and Sphinx, error handling, code reviews |
+| 11 | [Structuring Larger Projects with Modern Packaging](11-python-structuring-larger-projects-modern-packaging/) | `src` layout, `pyproject.toml`, build backends, CI/CD, quality gates, type safety, plug-in architectures |
 | 12 | [Performance Optimization](12-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
 
 ## Requirements
