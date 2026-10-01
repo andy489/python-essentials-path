@@ -18,6 +18,7 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 10 | [Clean Code Practices](10-clean-code-practices/) | Maintainable code (KISS, YAGNI, SRP, coupling), PEP 8 style, docstrings and Sphinx, error handling, code reviews |
 | 11 | [Structuring Larger Projects with Modern Packaging](11-python-structuring-larger-projects-modern-packaging/) | `src` layout, `pyproject.toml`, build backends, CI/CD, quality gates, type safety, plug-in architectures |
 | 12 | [Performance Optimization](12-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
+| 13 | [Design Patterns](13-design-patterns/) | Creational, structural, and behavioral Gang of Four patterns with before/after Python demos |
 
 ## Requirements
 
