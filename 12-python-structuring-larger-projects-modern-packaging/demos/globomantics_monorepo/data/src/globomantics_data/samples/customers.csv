@@ -1,0 +1,6 @@
+id,name,email,spend_last_12m,is_active
+1,Alice Johnson,alice@example.com,1200.50,True
+2,Bob Smith,bob@example.com,850.00,False
+3,Charlie Davis,charlie@example.com,3400.95,True
+4,Diana Rose,diana@example.com,50.25,True
+5,Edward King,edward@example.com,900.00,False

@@ -1,0 +1,37 @@
+name: CI - Quality Gates
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install tools
+        run: |
+          pip install --upgrade pip
+          pip install pytest pytest-cov mypy
+
+      - name: Run tests with coverage
+        run: |
+          pytest -q --cov=shared/src --cov=data/src --cov=analytics/src --cov=billing/src --cov=plugins/src --cov=cli/src --cov-report=term-missing
+
+      - name: Run mypy type checks
+        run: |
+          mypy .

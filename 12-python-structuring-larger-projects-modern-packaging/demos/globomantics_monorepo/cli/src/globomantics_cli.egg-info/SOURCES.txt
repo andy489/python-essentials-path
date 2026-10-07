@@ -1,0 +1,9 @@
+pyproject.toml
+src/globomantics_cli/__init__.py
+src/globomantics_cli/main.py
+src/globomantics_cli.egg-info/PKG-INFO
+src/globomantics_cli.egg-info/SOURCES.txt
+src/globomantics_cli.egg-info/dependency_links.txt
+src/globomantics_cli.egg-info/entry_points.txt
+src/globomantics_cli.egg-info/requires.txt
+src/globomantics_cli.egg-info/top_level.txt

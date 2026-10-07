@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globomantics-platform"
+version = "0.1.0"
+description = "Globomantics customer analytics and billing platform (organized demo)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Globomantics Engineering", email = "eng@globomantics.example" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+]
+
+[project.scripts]
+globomantics-cli = "globomantics_cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

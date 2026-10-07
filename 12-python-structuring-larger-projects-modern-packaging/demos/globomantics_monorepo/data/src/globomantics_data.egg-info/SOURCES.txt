@@ -1,0 +1,9 @@
+pyproject.toml
+src/globomantics_data/__init__.py
+src/globomantics_data/loader.py
+src/globomantics_data/models.py
+src/globomantics_data.egg-info/PKG-INFO
+src/globomantics_data.egg-info/SOURCES.txt
+src/globomantics_data.egg-info/dependency_links.txt
+src/globomantics_data.egg-info/requires.txt
+src/globomantics_data.egg-info/top_level.txt

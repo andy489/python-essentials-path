@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globomantics-shared"
+version = "0.1.0"
+description = "Shared utilities for all Globomantics packages"
+authors = [{ name = "Globomantics", email = "eng@globomantics.example" }]
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
