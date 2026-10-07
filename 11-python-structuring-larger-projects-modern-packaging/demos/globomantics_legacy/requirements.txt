@@ -1,2 +1,0 @@
-# No pinned versions, no tooling separation
-pydantic>=2.0.0

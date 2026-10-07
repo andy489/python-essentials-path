@@ -1,4 +1,0 @@
-globomantics-shared
-globomantics-data
-globomantics-analytics
-globomantics-billing

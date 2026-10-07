@@ -1,0 +1,18 @@
+name: typecheck
+
+on: [push]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -r requirements.txt
+      - run: mypy
+      - run: pyright
+      - run: python -m pytest
+      - run: mypy --linecount-report reports --any-exprs-report reports
+      - run: cat reports/linecount.txt

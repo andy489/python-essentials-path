@@ -1,0 +1,20 @@
+[
+  {
+    "device_id": "tracker-001",
+    "latitude": 47.61,
+    "longitude": -122.33,
+    "timestamp": "2026-08-01T08:00:00Z"
+  },
+  {
+    "device_id": "tracker-002",
+    "latitude": 123.4,
+    "longitude": 11.6,
+    "timestamp": "2026-08-01T08:00:12Z"
+  },
+  {
+    "device_id": "tracker-003",
+    "latitude": -33.87,
+    "longitude": 151.21,
+    "timestamp": "2026-08-01T08:00:25Z"
+  }
+]

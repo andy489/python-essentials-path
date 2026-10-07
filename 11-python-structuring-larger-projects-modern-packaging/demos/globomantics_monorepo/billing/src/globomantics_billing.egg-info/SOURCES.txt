@@ -1,8 +1,0 @@
-pyproject.toml
-src/globomantics_billing/__init__.py
-src/globomantics_billing/invoices.py
-src/globomantics_billing.egg-info/PKG-INFO
-src/globomantics_billing.egg-info/SOURCES.txt
-src/globomantics_billing.egg-info/dependency_links.txt
-src/globomantics_billing.egg-info/requires.txt
-src/globomantics_billing.egg-info/top_level.txt

@@ -1,7 +1,0 @@
-site_name: Globomantics Platform Documentation
-nav:
-  - Home: index.md
-  - Analytics: analytics.md
-
-theme:
-  name: mkdocs

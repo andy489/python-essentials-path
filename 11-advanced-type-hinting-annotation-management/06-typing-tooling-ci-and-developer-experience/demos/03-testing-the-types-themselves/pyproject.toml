@@ -1,0 +1,22 @@
+[tool.mypy]
+files = ["telemetry_hub", "legacy_ingest", "tests", "typetests"]
+strict = true
+explicit_package_bases = true
+enable_error_code = ["deprecated"]
+
+[[tool.mypy.overrides]]
+module = ["legacy_ingest", "legacy_ingest.*"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = false
+disable_error_code = ["deprecated"]
+
+[tool.pyright]
+include = ["telemetry_hub", "legacy_ingest", "typetests"]
+reportDeprecated = "error"

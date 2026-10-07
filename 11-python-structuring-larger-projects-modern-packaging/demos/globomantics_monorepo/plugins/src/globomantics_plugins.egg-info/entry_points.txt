@@ -1,4 +1,0 @@
-[globomantics.plugins]
-high_spender = globomantics_plugins.builtin_high_spender:HighSpenderDiscount
-loyal = globomantics_plugins.builtin_loyalty:LoyalCustomerDiscount
-vip = globomantics_plugins.builtin_vip:VipCustomerDiscount

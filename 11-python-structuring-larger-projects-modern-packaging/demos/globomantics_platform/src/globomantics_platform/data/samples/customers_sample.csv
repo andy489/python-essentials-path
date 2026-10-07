@@ -1,5 +1,0 @@
-id,name,email,spend_last_12m,is_active
-C001,Ana Silva,ana.silva@example.com,1200.50,True
-C002,Bob Smith,bob.smith@example.com,350.00,True
-C003,Charlie Inactive,charlie@example.com,50.00,False
-C004,Dina Loyal,dina@example.com,5400.00,True

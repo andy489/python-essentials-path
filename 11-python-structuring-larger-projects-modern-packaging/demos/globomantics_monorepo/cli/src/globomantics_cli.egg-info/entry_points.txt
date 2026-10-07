@@ -1,2 +1,0 @@
-[console_scripts]
-globomantics = globomantics_cli.main:main

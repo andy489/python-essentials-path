@@ -1,9 +1,0 @@
-pyproject.toml
-src/globomantics_shared/__init__.py
-src/globomantics_shared/config.py
-src/globomantics_shared/logging_utils.py
-src/globomantics_shared/types.py
-src/globomantics_shared.egg-info/PKG-INFO
-src/globomantics_shared.egg-info/SOURCES.txt
-src/globomantics_shared.egg-info/dependency_links.txt
-src/globomantics_shared.egg-info/top_level.txt

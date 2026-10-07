@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: globomantics-billing
-Version: 0.1.0
-Requires-Dist: globomantics-shared
-Requires-Dist: globomantics-data
-Requires-Dist: globomantics-analytics
-Requires-Dist: globomantics-plugins

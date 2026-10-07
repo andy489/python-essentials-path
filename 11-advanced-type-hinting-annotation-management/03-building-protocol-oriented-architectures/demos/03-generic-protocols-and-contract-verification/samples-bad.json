@@ -1,0 +1,35 @@
+[
+  {
+    "device_id": "sensor-001",
+    "temperature": 21.5,
+    "status": "ok",
+    "timestamp": "2026-08-01T08:00:00Z"
+  },
+  {
+    "device_id": "sensor-002",
+    "temperature": 47.9,
+    "status": "warning",
+    "timestamp": "2026-08-01T08:00:12Z"
+  },
+  {
+    "device_id": "sensor-003",
+    "temperature": 19.8,
+    "status": "ok",
+    "timestamp": "2026-08-01T08:00:25Z"
+  },
+  {
+    "device_id": "sensor-001",
+    "temperature": 88.2,
+    "status": "error",
+    "timestamp": "2026-08-01T08:01:00Z"
+  },
+  {
+    "device_id": "sensor-004",
+    "temperature": "21.5",
+    "status": "ok",
+    "timestamp": "2026-08-01T08:01:30Z"
+  },
+  {
+    "note": "heartbeat without telemetry fields"
+  }
+]

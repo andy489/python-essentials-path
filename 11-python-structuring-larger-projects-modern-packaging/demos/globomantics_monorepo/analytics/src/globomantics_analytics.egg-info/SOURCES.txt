@@ -1,8 +1,0 @@
-pyproject.toml
-src/globomantics_analytics/__init__.py
-src/globomantics_analytics/tiering.py
-src/globomantics_analytics.egg-info/PKG-INFO
-src/globomantics_analytics.egg-info/SOURCES.txt
-src/globomantics_analytics.egg-info/dependency_links.txt
-src/globomantics_analytics.egg-info/requires.txt
-src/globomantics_analytics.egg-info/top_level.txt
