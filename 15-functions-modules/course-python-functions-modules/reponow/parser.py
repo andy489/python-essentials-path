@@ -31,8 +31,8 @@ def parse_url(url: str) -> tuple[str, str]:
         if _BLOB_TREE_PATTERN.search(path):
             path = re.sub(r"/(blob|tree).*", "", path)
         parsed = {"domain": url_parsed.netloc, "repo_path": path}
-    elif "/" not in url:  # shorthand: repo  =>  github.com/g0t4/{url}
-        parsed = {"domain": "github.com", "repo_path": "g0t4/" + url}
+    elif "/" not in url:  # shorthand: repo  =>  github.com/andy489/{url}
+        parsed = {"domain": "github.com", "repo_path": "andy489/" + url}
     else:  # shorthand: org/repo  =>  github.com/{url}
         parsed = {"domain": "github.com", "repo_path": url}
 
@@ -55,10 +55,10 @@ if __name__ == "__main__":
     HOME = os.path.expanduser("~")
 
     cases = [
-        ("https://gitlab.com/g0t4/dotfiles.git",                                    f"{HOME}/repos/gitlab/g0t4/dotfiles"),
+        ("https://gitlab.com/andy489/python-essentials-path.git",                    f"{HOME}/repos/gitlab/andy489/python-essentials-path"),
         ("https://huggingface.co/datasets/PleIAs/common_corpus/tree/main",           f"{HOME}/repos/huggingface.co/datasets/PleIAs/common_corpus"),
-        ("https://github.com/torvalds/linux",                                        f"{HOME}/repos/github/torvalds/linux"),
-        ("git@github.com:g0t4/ask-openai.nvim",                                     f"{HOME}/repos/github/g0t4/ask-openai.nvim"),
+        ("https://github.com/andy489/python-essentials-path",                        f"{HOME}/repos/github/andy489/python-essentials-path"),
+        ("git@github.com:andy489/python-essentials-path",                            f"{HOME}/repos/github/andy489/python-essentials-path"),
     ]
     for url, expected in cases:
         result, _ = parse_url(url)
