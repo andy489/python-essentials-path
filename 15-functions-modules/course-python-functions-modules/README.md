@@ -4,12 +4,11 @@ Features:
 - A library that allows you to parse repo locations and map them to a consistent location on disk.
 - Several commands to help clone and/or open a repo, via its repo location only:
 ```sh
-wcl https://github.com/g0t4/dotfiles
-opener https://github.com/g0t4/dotfiles
+wcl https://github.com/andy489/python-essentials-path
+opener https://github.com/andy489/python-essentials-path
 ```
 
-This package is from a learning exercise for my course at Pluralsight:
-TODO link coming soon: [Python: Functions and Modules](https://github.com/g0t4/course-python-functions-modules)
+This package is a learning exercise covering Python functions and modules.
 
 
 ## Install
@@ -59,14 +58,10 @@ python3 -m reponow.opener
 
 ### Test wcl
 
-FYI I have automated unit tests in the real wcl.py I use, in my dotfiles repo:
-https://github.com/g0t4/dotfiles/blob/master/zsh/compat_fish/pythons/wcl.tests.py
-
 ```sh
-
-# AND, I have a few examples in test_cases.sh:
+# A few examples in test_cases.sh:
 ./test_cases.sh > expected_test_cases_output
-git diff # see if any changes to versioned output file (checked in copy is correct per my wesdemos user)
+git diff # see if any changes to versioned output file
 
 # double check expected matches what's in test_cases.sh
 icdiff test_cases.sh expected_test_cases_output
