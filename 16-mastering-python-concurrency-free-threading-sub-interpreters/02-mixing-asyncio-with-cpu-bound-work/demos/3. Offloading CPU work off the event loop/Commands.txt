@@ -1,0 +1,4 @@
+python -c "import json, threading, time, urllib.request; req = urllib.request.Request('http://127.0.0.1:8123/simulate', data=json.dumps({'scenarios': 120000, 'seed': 7}).encode()); t = threading.Thread(target=urllib.request.urlopen, args=(req,)); t.start(); time.sleep(0.6); s = time.perf_counter(); urllib.request.urlopen('http://127.0.0.1:8123/ping').read(); wall = time.perf_counter() - s; t.join(); print('ping seconds=' + format(wall, '.2f') + ' ping_blocked=' + str(wall > 1.0))"
+
+
+python -c "import urllib.request; print(urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8123/simulate', data=b'{}')).read().decode())"
