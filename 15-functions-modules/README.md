@@ -25,8 +25,8 @@ Hands-on exploration of Python functions and the module/package system, built ar
 The `reponow` package clones or opens a repo given only its URL, mapping it to a consistent local path:
 
 ```sh
-wcl https://github.com/torvalds/linux
-opener https://github.com/g0t4/dotfiles
+wcl https://github.com/andy489/python-essentials-path
+opener https://github.com/andy489/python-essentials-path
 ```
 
 The `pathz` package wraps `os.path` functions so that `~/path` tilde-expansion is automatic.
