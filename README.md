@@ -16,9 +16,10 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 08 | [Python Development Environments](08-development-environments/) | `pip`, `venv`, `uv`, `poetry`, `conda`, lockfiles, environment reproducibility |
 | 09 | [Python Testing Strategies](09-testing-strategies/) | `pytest` unit tests, test doubles (mocks, stubs, fakes), integration and functional tests |
 | 10 | [Clean Code Practices](10-clean-code-practices/) | Maintainable code (KISS, YAGNI, SRP, coupling), PEP 8 style, docstrings and Sphinx, error handling, code reviews |
-| 11 | [Structuring Larger Projects with Modern Packaging](11-python-structuring-larger-projects-modern-packaging/) | `src` layout, `pyproject.toml`, build backends, CI/CD, quality gates, type safety, plug-in architectures |
-| 12 | [Performance Optimization](12-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
-| 13 | [Design Patterns](13-design-patterns/) | Creational, structural, and behavioral Gang of Four patterns with before/after Python demos |
+| 11 | [Advanced Type Hinting & Annotation Management](11-advanced-type-hinting-annotation-management/) | Generics, `Callable`, `Protocol`, runtime annotation introspection, mypy at scale, CI typing gates, annotation-driven frameworks |
+| 12 | [Structuring Larger Projects with Modern Packaging](12-python-structuring-larger-projects-modern-packaging/) | `src` layout, `pyproject.toml`, build backends, CI/CD, quality gates, type safety, plug-in architectures |
+| 13 | [Performance Optimization](13-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
+| 14 | [Design Patterns](14-design-patterns/) | Creational, structural, and behavioral Gang of Four patterns with before/after Python demos |
 
 ## Requirements
 
