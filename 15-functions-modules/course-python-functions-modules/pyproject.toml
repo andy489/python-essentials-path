@@ -1,0 +1,39 @@
+[project]
+name = "reponow"
+description = "convention based repo clone, open, etc"
+version = "0.0.1"
+requires-python = ">=3.12"
+readme = "README.md"
+authors = [
+  { name="Wes Higbee", email="wes.mcclure@gmail.com" },
+]
+dependencies = [
+    "rich>=14.0.0",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6.29.5",
+    "ipython>=9.3.0",
+    "pytest>=8.4.1",
+    "pytest-watch>=4.2.0",
+    "rope>=1.13.0",
+    "yapf>=0.43.0",
+]
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+wcl = "reponow.wcl:main"
+open_repo = "reponow.opener:main"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = ['missing-module-docstring', 'line-too-long' ]
+
+[project.urls]
+Homepage = "https://github.com/g0t4/course-python-functions-modules"
+
