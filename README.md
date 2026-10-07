@@ -20,6 +20,7 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 12 | [Structuring Larger Projects with Modern Packaging](12-python-structuring-larger-projects-modern-packaging/) | `src` layout, `pyproject.toml`, build backends, CI/CD, quality gates, type safety, plug-in architectures |
 | 13 | [Performance Optimization](13-performance-optimization/) | Measuring and profiling, data structures and algorithms, threads, `asyncio`, multiprocessing |
 | 14 | [Design Patterns](14-design-patterns/) | Creational, structural, and behavioral Gang of Four patterns with before/after Python demos |
+| 15 | [Functions and Modules](15-functions-modules/) | Functions in depth, import system internals, packages, modern packaging with `pyproject.toml`, decorators, and `pytest` parametrize |
 
 ## Requirements
 
