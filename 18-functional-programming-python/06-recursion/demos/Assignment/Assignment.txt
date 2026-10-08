@@ -1,0 +1,5 @@
+1. Change the new function, count_expedited_orders_with_backordered_items_tramp,
+   replacing the internal call to any with a recursive function using the tramp function
+2. The modules uses Python built in facilities to get the head and tail of a list or tuple.  
+   These will only work with sequences that are subscriptable.  Generators, for example are not.  
+   Build head and tail functions that simulate these operations but for any sequence.  Hint: Check out the islice and chain functions in the itertools module.

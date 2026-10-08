@@ -1,0 +1,7 @@
+1. Using the solution from the previous module, change it to return      
+iterators (as generators) instead of tuples whereever possible
+2. Changet the set expedited orders function to use the new action_if function
+3. Ensure the mark_backordered function so that it still returns a 
+   tuple, since this will become the new master collection
+4. (hint) Create a new function, mark_backordered_items to factor out
+   the logic handling the order_items collection

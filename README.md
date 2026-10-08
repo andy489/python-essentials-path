@@ -23,10 +23,11 @@ A structured series of Jupyter notebooks covering Python fundamentals, with hand
 | 15 | [Functions and Modules](15-functions-modules/) | Functions in depth, import system internals, packages, modern packaging with `pyproject.toml`, decorators, and `pytest` parametrize |
 | 16 | [Mastering Python Concurrency: Free Threading & Sub-Interpreters](16-mastering-python-concurrency-free-threading-sub-interpreters/) | GIL internals, free-threading (PEP 703), sub-interpreters, asyncio hybrid patterns, profiling, and production deployment |
 | 17 | [Mastering Python Concurrency: Free Threading & Sub-Interpreters](17-mastering-python-concurrency-free-threading-sub-interpreters/) | GIL internals, free-threading (PEP 703/779), sub-interpreters (PEP 684/734), asyncio hybrid patterns, `InterpreterPoolExecutor`, profiling, 4-gate production rollout |
+| 18 | [Functional Programming in Python](18-functional-programming-python/) | First-class functions, pure functions, immutability, lazy evaluation, recursion & trampolining, pattern matching (`match`/`case`) |
 
 ## Requirements
 
-- Python 3.11+ (most modules); Python 3.14 / 3.14t required for free-threading and sub-interpreter cells (modules 16–17)
+- Python 3.11+ (most modules); Python 3.14 / 3.14t required for free-threading and sub-interpreter cells (modules 16–17); Python 3.10+ required for pattern matching (module 18)
 - Jupyter Notebook or JupyterLab
 
 ```bash

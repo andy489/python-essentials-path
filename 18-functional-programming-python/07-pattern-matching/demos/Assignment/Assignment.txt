@@ -1,0 +1,4 @@
+1. Add post init methods to the customer and order item classes using match statements
+   to validate their values.  Use the underscore where appropriate to ignore arguments
+   already checked. Hint, *_ can be used as a wildcard to if more one or more list items
+2. Test your work.
